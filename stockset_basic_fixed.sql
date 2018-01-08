@@ -1,0 +1,60 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: stockset
+-- ------------------------------------------------------
+-- Server version	5.7.20-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `basic_fixed`
+--
+
+DROP TABLE IF EXISTS `basic_fixed`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `basic_fixed` (
+  `CODE` char(6) NOT NULL,
+  `Name` char(32) NOT NULL,
+  `NIQ2` varchar(10) NOT NULL,
+  `NIQ1` varchar(10) NOT NULL,
+  `NIQ0` varchar(10) NOT NULL,
+  `SALEQ2` varchar(10) NOT NULL,
+  `SALEQ1` varchar(10) NOT NULL,
+  `SALEQ0` varchar(10) NOT NULL,
+  `AST` varchar(10) NOT NULL,
+  `CAP` varchar(10) NOT NULL,
+  `DPT` varchar(10) NOT NULL,
+  PRIMARY KEY (`CODE`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `basic_fixed`
+--
+
+LOCK TABLES `basic_fixed` WRITE;
+/*!40000 ALTER TABLE `basic_fixed` DISABLE KEYS */;
+INSERT INTO `basic_fixed` VALUES ('123456','Samsung','3310','3350','3650','45000','48000','52000','375000','250000','125000'),('123457','LGDISPLAY','5500','5700','5800','55000','58000','62000','500000','280000','220000'),('123458','Hyundai','500','700','800','5000','8000','2000','5000','2800','2200'),('123459','나라완','5500','5700','5800','55000','58000','62000','500000','280000','220000'),('123460','Perlabyss','15500','15700','15800','525000','528000','622000','800000','420000','380000');
+/*!40000 ALTER TABLE `basic_fixed` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-01-08 15:19:35

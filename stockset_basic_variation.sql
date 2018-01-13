@@ -31,8 +31,9 @@ CREATE TABLE `basic_variation` (
   `Y_PRH` varchar(10) NOT NULL,
   `Y_PRL` varchar(10) NOT NULL,
   `D_IV` varchar(4) NOT NULL,
-  `VOL` double NOT NULL,
-  PRIMARY KEY (`CODE`)
+  `Numb` varchar(6) NOT NULL,
+  `VOL` varchar(10) NOT NULL,
+  PRIMARY KEY (`Numb`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -42,7 +43,7 @@ CREATE TABLE `basic_variation` (
 
 LOCK TABLES `basic_variation` WRITE;
 /*!40000 ALTER TABLE `basic_variation` DISABLE KEYS */;
-INSERT INTO `basic_variation` VALUES ('123457','LGDISPLAY','48000','48800','46800','250000','52800','YES',0.23),('123461','Perlabyss','225500','227000','198000','250000','52800','YES',0);
+INSERT INTO `basic_variation` VALUES ('123456','gaybar','5000','8800','6700','9000','4300','YES','1','0.31343284'),('123476','shobar','1500','1800','1700','1900','300','YES','2','0.05882353'),('123156','gaybar','50500','88500','65700','95000','43500','No','3','0.34703196'),('127156','jrybar','8500','8850','6570','9500','4350','No','4','0.34703196'),('543267','Hyuo','95000','88000','86000','83000','80000','YES','5','0.02325581');
 /*!40000 ALTER TABLE `basic_variation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-08 15:19:35
+-- Dump completed on 2018-01-14  7:31:30

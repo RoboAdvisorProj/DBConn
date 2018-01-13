@@ -27,20 +27,22 @@ CREATE TABLE `ad_indicator` (
   `Name` char(32) NOT NULL,
   `Price` varchar(10) NOT NULL,
   `Value` varchar(10) NOT NULL,
-  `PER` double DEFAULT NULL,
+  `PER` decimal(6,3) DEFAULT NULL,
   `EPS` varchar(8) NOT NULL,
-  `ROA` double NOT NULL,
-  `ROE` double DEFAULT NULL,
-  `BETA` double DEFAULT NULL,
-  `PBR` double DEFAULT NULL,
-  `NIQ` varchar(10) NOT NULL,
-  `NI3Q` varchar(10) NOT NULL,
-  `SALE3Q` double DEFAULT NULL,
-  `DEPTR` double DEFAULT NULL,
+  `ROA` decimal(6,3) DEFAULT NULL,
+  `ROE` decimal(6,3) DEFAULT NULL,
+  `BETA` decimal(6,3) DEFAULT NULL,
+  `PBR` decimal(5,2) DEFAULT NULL,
+  `NIY` varchar(10) NOT NULL,
+  `NI3Y` float NOT NULL,
+  `SALE3Y` float DEFAULT NULL,
+  `DEPTR` decimal(6,3) DEFAULT NULL,
   `D_IV` char(5) NOT NULL,
-  `VOL_D` double DEFAULT NULL,
-  `VOL_Y` double DEFAULT NULL,
-  PRIMARY KEY (`CODE`)
+  `VOL_D` decimal(5,4) DEFAULT NULL,
+  `VOL_Y` decimal(5,4) DEFAULT NULL,
+  `Chan` decimal(4,2) NOT NULL,
+  `Numb` varchar(7) NOT NULL,
+  PRIMARY KEY (`Numb`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,6 +52,7 @@ CREATE TABLE `ad_indicator` (
 
 LOCK TABLES `ad_indicator` WRITE;
 /*!40000 ALTER TABLE `ad_indicator` DISABLE KEYS */;
+INSERT INTO `ad_indicator` VALUES ('123456','KELLOG','50','800',0.000,'0',0.000,0.000,0.000,0.00,'0',0.774597,0,0.000,'YES',0.0000,0.0000,0.00,'1'),('123476','PERLABYSS','500','8000',0.000,'0',0.000,0.000,0.000,0.00,'0',0.693134,0,0.000,'YES',0.0000,0.0000,0.00,'2'),('123422','Hospok','300','2500',0.000,'0',0.000,0.000,0.000,0.00,'0',-0.0327913,0,0.000,'YES',0.0000,0.0000,0.00,'3');
 /*!40000 ALTER TABLE `ad_indicator` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -62,4 +65,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-08 15:19:35
+-- Dump completed on 2018-01-14  7:31:30

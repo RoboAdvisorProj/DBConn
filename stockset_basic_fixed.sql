@@ -25,16 +25,17 @@ DROP TABLE IF EXISTS `basic_fixed`;
 CREATE TABLE `basic_fixed` (
   `CODE` char(6) NOT NULL,
   `Name` char(32) NOT NULL,
-  `NIQ2` varchar(10) NOT NULL,
-  `NIQ1` varchar(10) NOT NULL,
-  `NIQ0` varchar(10) NOT NULL,
-  `SALEQ2` varchar(10) NOT NULL,
-  `SALEQ1` varchar(10) NOT NULL,
-  `SALEQ0` varchar(10) NOT NULL,
+  `NIY2` varchar(10) NOT NULL,
+  `NIY1` varchar(10) NOT NULL,
+  `NIY0` varchar(10) NOT NULL,
+  `SALEY2` varchar(10) NOT NULL,
+  `SALEY1` varchar(10) NOT NULL,
+  `SALEY0` varchar(10) NOT NULL,
   `AST` varchar(10) NOT NULL,
   `CAP` varchar(10) NOT NULL,
   `DPT` varchar(10) NOT NULL,
-  PRIMARY KEY (`CODE`)
+  `Numb` varchar(6) NOT NULL,
+  PRIMARY KEY (`Numb`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -44,7 +45,7 @@ CREATE TABLE `basic_fixed` (
 
 LOCK TABLES `basic_fixed` WRITE;
 /*!40000 ALTER TABLE `basic_fixed` DISABLE KEYS */;
-INSERT INTO `basic_fixed` VALUES ('123456','Samsung','3310','3350','3650','45000','48000','52000','375000','250000','125000'),('123457','LGDISPLAY','5500','5700','5800','55000','58000','62000','500000','280000','220000'),('123458','Hyundai','500','700','800','5000','8000','2000','5000','2800','2200'),('123459','나라완','5500','5700','5800','55000','58000','62000','500000','280000','220000'),('123460','Perlabyss','15500','15700','15800','525000','528000','622000','800000','420000','380000');
+INSERT INTO `basic_fixed` VALUES ('123456','KELOGG','25','50','80','5','6','7','10','6','4','1'),('123476','PERLABYSS','23','40','66','50','60','70','100','60','40','2'),('123422','Hospok','31','30','29','60','66','60','80','20','60','3');
 /*!40000 ALTER TABLE `basic_fixed` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-08 15:19:35
+-- Dump completed on 2018-01-14  7:31:30

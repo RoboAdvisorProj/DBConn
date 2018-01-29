@@ -182,7 +182,7 @@ def risk_neutral():
 # <2. 안정추구 조건식>
 def safe_prefer():
     curs = conn.cursor()
-    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where Value >=  1000, PER <= 7.0, ROE >= 10, ROA >= 6, BETA <= 1.2, NIY0 > 0, NI3Y > 0, SALE3Y > 0, DEPRT < 40, PBR < 1.3, D_IV = YES, VOL_Y <= 30, VOL_D <= 7;"
+    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where Value >=  1000 and PER <= 7.0 and ROE >= 10 and ROA >= 6 and BETA <= 1.2 and NIY0 > 0 and NI3Y > 0 and SALE3Y > 0 and DEPRT < 40 and PBR < 1.3 and D_IV = YES and VOL_Y <= 30 and VOL_D <= 7;"
     curs.execute(sql)
     rs = curs.fetchall()
     for row in rs:
@@ -192,7 +192,7 @@ def safe_prefer():
 # <3. 안정형 조건식>
 def safe_main():
     curs = conn.cursor()
-    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where Value >=  2500, PER <= 3.0, ROE >= 3, ROA >= 5, BETA <= 1.15, NIY0 > 0, NI3Y > 0, SALE3Y > 0, DEPRT < 30, PBR < 1.0, D_IV = YES, VOL_Y <= 20, VOL_D <= 5;"
+    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where Value >=  2500 and PER <= 3.0 and ROE >= 3 and ROA >= 5 and BETA <= 1.15 and NIY0 > 0 and NI3Y > 0 and SALE3Y > 0 and DEPRT < 30 and PBR < 1.0 and D_IV = YES and VOL_Y <= 20 and VOL_D <= 5;"
     curs.execute(sql)
     rs = curs.fetchall()
     for row in rs:
@@ -202,7 +202,7 @@ def safe_main():
 # <4. 적극투자 조건식>
 def risk_prefer():
     curs = conn.cursor()
-    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where Value >=  200, ROE >= 6, ROA >= 5, BETA >= 1.5, NIY0 > 0, NI3Y > 0, SALE3Y > 0, DEPRT < 80, PBR < 2.0, VOL_Y <= 80, VOL_D <= 15;"
+    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where Value >=  200 and ROE >= 6 and ROA >= 5 and BETA >= 1.5 and NIY0 > 0 and NI3Y > 0 and SALE3Y > 0 and DEPRT < 80 and PBR < 2.0 and VOL_Y <= 80 and VOL_D <= 15;"
     curs.execute(sql)
     rs = curs.fetchall()
     for row in rs:
@@ -212,7 +212,7 @@ def risk_prefer():
 # <5. 공격투자 조건식>
 def risk_agg():
     curs = conn.cursor()
-    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where ROE >= 12, BETA >= 2.0;"
+    sql = "select CODE, Name, Price, ROE, BETA, Chan from ad_indicator where ROE >= 12 and BETA >= 2.0;"
     curs.execute(sql)
     rs = curs.fetchall()
     for row in rs:

@@ -33,7 +33,7 @@ CREATE TABLE `ad_indicator` (
   `ROE` decimal(6,3) DEFAULT NULL,
   `BETA` decimal(6,3) DEFAULT NULL,
   `PBR` decimal(5,2) DEFAULT NULL,
-  `NIY0` varchar(10) NOT NULL,
+  `NIY0` decimal(7,2) NOT NULL,
   `NI3Y` decimal(7,2) NOT NULL,
   `SALE3Y` decimal(7,2) DEFAULT NULL,
   `DEPRT` decimal(7,2) DEFAULT NULL,

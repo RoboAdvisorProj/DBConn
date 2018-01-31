@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `ad_indicator`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ad_indicator` (
-  `CODE` char(6) NOT NULL,
+  `CODE` char(10) NOT NULL,
   `Name` char(32) NOT NULL,
   `Price` varchar(10) NULL,
   `Value` varchar(10) NULL,
